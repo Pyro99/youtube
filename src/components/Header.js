@@ -1,31 +1,37 @@
-import React from 'react'
+import React from 'react';
+import { hamburger, user_logo, youtube_logo } from '../constants';
 
 const Header = () => {
   return (
-    <div>
-      <div>
+    <div className='grid grid-flow-col p-5 m-2 shadow-lg'>
+      <div className='flex h-8 col-span-1'>
         <img
-          src="https://image.shutterstock.com/image-vector/thick-hamburger-menu-bar-line-260nw-274138187.jpg"
-          alt="hamburger_icon"
+          src={hamburger}
+          alt='hamburger_icon'
         />
 
         <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuE54d8krphaVP1AQ1Jd4G1uRqLcA2N81TnA&usqp=CAU"
-          alt="logo"
+          className='pl-2'
+          src={youtube_logo}
+          alt='logo'
         />
       </div>
-      <div>
-        <input type="text" />
-        <button>Search</button>
+      <div className='col-span-10 ml-80'>
+        <input
+          type='text'
+          className='px-5 w-1/2 border border-gray-400 p-2 rounded-l-full'
+        />
+        <button className='border border-gray-400 px-5 py-2 rounded-r-full bg-gray-100'>🔍</button>
       </div>
-      <div>
+      <div className='col-span-1'>
         <img
-          src="https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png"
-          alt="user_icon"
+          className='h-8'
+          src={user_logo}
+          alt='user_icon'
         />
       </div>
     </div>
   );
-}
+};
 
-export default Header
+export default Header;
