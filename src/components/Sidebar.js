@@ -7,7 +7,7 @@ const Sidebar = () => {
   if(!menu) return null;
   
   return (
-    <div className='p-2 m-2 overflow-y-scroll'>
+    <div className='p-2 m-2'>
       <ul>
         <li className='pb-2'>Home</li>
         <li className='pb-2'>Shorts</li>
