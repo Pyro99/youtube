@@ -2,6 +2,7 @@ import React from 'react';
 import { hamburger, user_logo, youtube_logo } from '../constants';
 import { useDispatch } from 'react-redux';
 import { toggleMenu } from '../utils/appSlice';
+import { Link } from 'react-router-dom';
 const Header = () => {
   const dispatch = useDispatch();
   const toggleMenuHandler = () => {
@@ -17,13 +18,13 @@ const Header = () => {
           src={hamburger}
           alt='hamburger_icon'
         />
-        <a href='/'>
+       <Link to = "/"> 
           <img
             className='h-8 mx-2'
             src={youtube_logo}
             alt='logo'
           />
-        </a>
+        </Link>
       </div>
       <div className='col-span-10 ml-80'>
         <input

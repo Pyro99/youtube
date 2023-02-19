@@ -3,13 +3,13 @@ import Header from './components/Header';
 import Body from './components/Body';
 import { Provider } from 'react-redux';
 import store from './utils/store';
-import {RouterProvider, createBrowserRouter } from 'react-router-dom';
+import {createBrowserRouter } from 'react-router-dom';
 import Watch from './components/Watch';
 import MainContainer from './components/MainContainer';
 
-const appRouter = createBrowserRouter([{
+export const appRouter = createBrowserRouter([{
   path: "/",
-  element : <Body />,
+  element : <App />,
   children :[{
     path: "/",
     element : <MainContainer />
@@ -27,7 +27,7 @@ function App() {
     <Provider store={store}> 
     <div>
       <Header />
-      <RouterProvider router ={appRouter} />
+      <Body />
     </div>
     </Provider>
   );
