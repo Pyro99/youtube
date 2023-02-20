@@ -7,4 +7,4 @@ export const user_logo = "https://www.iconpacks.net/icons/2/free-user-icon-3296-
 const api_key = "AIzaSyDiiqjTfo_oycGSjf44ma5eJT6KFb25TQA";
 export const youtube_api = "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=100&regionCode=IN&key="+api_key;
 
-
+export const youtube_search_api = "http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";
