@@ -5,6 +5,7 @@ import searchSlice from "./searchSlice";
 const store = configureStore({
   reducer: {
     sidebar: appSlice,
+    search :searchSlice,
   },
 });
 
