@@ -14,8 +14,7 @@ const Header = () => {
   const [suggestions, setSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
 
-  const searchCache = useSelector(store => store.search);
-
+  const searchCache = useSelector((store) => store.search);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -32,13 +31,14 @@ const Header = () => {
   }, [search]);
 
   const getSearchResults = async () => {
-    console.log("APi call -" + search);
     const data = await fetch(youtube_search_api + search);
     const response = await data.json();
     setSuggestions(response[1]);
-    dispatch(cacheSearchResults({
-      [search] : response[1]
-    }))
+    dispatch(
+      cacheSearchResults({
+        [search]: response[1],
+      })
+    );
   };
 
   const dispatch = useDispatch();

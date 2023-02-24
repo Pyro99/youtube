@@ -1,14 +1,12 @@
-import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { useSearchParams } from 'react-router-dom';
-import { closeMenu } from '../utils/appSlice';
-import CommentsContainer from './CommentsContainer';
-import LiveChat from './LiveChat';
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { useSearchParams } from "react-router-dom";
+import { closeMenu } from "../utils/appSlice";
+import CommentsContainer from "./CommentsContainer";
+import LiveChat from "./LiveChat";
 
 const Watch = () => {
   const [searchParams] = useSearchParams();
-  console.log(searchParams.get('v'));
-
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(closeMenu());
@@ -20,7 +18,11 @@ const Watch = () => {
           <iframe
             width="1200"
             height="600"
-            src={"https://www.youtube.com/embed/" + searchParams.get("v")+ "?autoplay=1"}
+            src={
+              "https://www.youtube.com/embed/" +
+              searchParams.get("v") +
+              "?autoplay=1"
+            }
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
