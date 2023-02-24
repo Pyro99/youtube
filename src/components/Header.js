@@ -3,7 +3,7 @@ import {
   user_logo,
   youtube_logo,
   youtube_search_api,
-} from "../constants";
+} from "../utils/constants";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleMenu } from "../utils/appSlice";
 import { Link } from "react-router-dom";

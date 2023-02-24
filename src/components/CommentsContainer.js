@@ -1,6 +1,6 @@
 import React from "react";
 import commentsData from "../commentsData";
-import { user_logo } from "../constants";
+import { user_logo } from "../utils/constants";
 
 const Comment = ({ data }) => {
   const { name, comment} = data;

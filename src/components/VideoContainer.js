@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { youtube_api } from "../constants";
+import { youtube_api } from "../utils/constants";
 import VideoCard from "./VideoCard";
 import { Link } from "react-router-dom";
 const VideoContainer = () => {
